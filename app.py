@@ -31,7 +31,7 @@ st.sidebar.title("Menu")
 
 
 #image = PhotoImage(file = 'C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif')
-image= open(a)
+image= a
 #contents = image.read()
 #data_url = base64.b64encode(contents).decode("utf-8")
 image.close()
