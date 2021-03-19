@@ -18,25 +18,85 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 
+df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+
+#import streamlit as st
+import base64
 st.title('Covid-19 India Cases')
 st.write("It shows ***Coronavirus Cases*** in India")
-st.sidebar.title("Selector")
-image = Image.open("C:\\Users\\Sathishkumar\\Desktop\\New folder\\Coronavirus.jpg")
-st.image(image,use_column_width=True)
-st.markdown('<style>body{background-color: lightblue;}</style>',unsafe_allow_html=True)
+st.sidebar.title("Menu")
+
+
+#image = PhotoImage(file = 'C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif')
+image= open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif", "rb")
+contents = image.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+image.close()
+
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
+    unsafe_allow_html=True,
+)
+
+#image = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
+#st.image(image,use_column_width=False)
+#st.markdown('<style>body{background-color: lightblue;}</style>',unsafe_allow_html=True)
 
 @st.cache
 def load_data():
-    df = pd.read_csv("C:\\Users\\Sathishkumar\\Desktop\\New folder\\state_wise.csv")
+    df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+    df=df1.drop([0,37])
     return df
 
 df = load_data()
 
-visualization = st.sidebar.selectbox('Select a Chart type',('Bar Chart','Pie Chart','Line Chart'))
+visualization = st.sidebar.selectbox('Select a Chart type',('Bar Chart','Pie Chart','Line Chart','Scatter Chart'))
+#total=st.sidebar.selectbox('Select a Total Cases',df1['State'].iloc[0],)
 state_select = st.sidebar.selectbox('Select a state',df['State'].unique())
 status_select = st.sidebar.radio('Covid-19 patient status',('Confirmed','Active','Recovered','Deaths'))
 #select = st.sidebar.selectbox('Covid-19 patient status',('confirmed_cases','active_cases','recovered_cases','death_cases'))
 selected_state = df[df['State']==state_select]
+st.markdown("## **Overall Cases**")
+
+df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+def get_total(df1):
+    total = pd.DataFrame({
+    'Status':['Confirmed', 'Active', 'Recovered','Deaths'],
+    'Number of cases':(df1.iloc[0]['Confirmed'],
+    df1.iloc[0]['Active'], 
+    df1.iloc[0]['Recovered'], df1.iloc[0]['Deaths'])})
+    return total
+total=get_total(df1)
+
+if visualization=='Bar Chart':
+    total_graph = px.bar(total, x='Status',y='Number of cases',
+                               labels={'Number of cases':'Number of Total cases'},color='Status')
+    st.plotly_chart(total_graph)
+
+elif visualization=='Pie Chart':
+    #if total==(df1['State'].iloc[0],):
+        st.title("Total Cases")
+        fig = px.pie(total, values=total['Number of cases'], names=total['Status'])
+        st.plotly_chart(fig)
+elif visualization =='Line Chart':
+        st.title("Total Cases")
+        fig = px.line(total,x=total['Status'],y=total['Number of cases'])
+        st.plotly_chart(fig)
+elif visualization =='Scatter Chart':
+        #fig=px.scatter(total, x=total['Status'], y=total['Number of cases'], color=total['Status'],size=total['Number of cases'])
+        fig=px.scatter(total, x=total['Status'], y=total['Number of cases'],
+	         size="Number of cases", color=total['Status'],size_max=60)    
+        st.plotly_chart(fig)
+    
+    
+def get_table():
+    datatable = total[['Status','Number of cases']]
+    return datatable
+
+datatable = get_table()
+st.dataframe(datatable)
+
+
 st.markdown("## **State level analysis**")
 
 def get_total_dataframe(df):
@@ -47,6 +107,9 @@ def get_total_dataframe(df):
     df.iloc[0]['Recovered'],df.iloc[0]['Deaths'])})
     return total_dataframe
 state_total = get_total_dataframe(selected_state)
+
+
+
 if visualization=='Bar Chart':
     state_total_graph = px.bar(state_total, x='Status',y='Number of cases',
                                labels={'Number of cases':'Number of cases in %s' % (state_select)},color='Status')
@@ -86,6 +149,29 @@ elif visualization =='Line Chart':
         fig = px.line(df,x='State',y=df['Active'])
         st.plotly_chart(fig)
         
+elif visualization =='Scatter Chart':
+        #fig=px.scatter(total, x=total['Status'], y=total['Number of cases'], color=total['Status'],size=total['Number of cases'])
+    if status_select == 'Deaths':
+        st.title("Total Death Cases Among states")   
+        fig=px.scatter(df, x='State', y=df['Deaths'],
+	         size="Deaths",size_max=110)    
+        st.plotly_chart(fig)
+    elif status_select =='Confirmed':
+      st.title("Total Confirmed Cases Among states")
+      fig=px.scatter(df, x='State', y=df['Confirmed'],
+	         size="Confirmed",size_max=110)
+      st.plotly_chart(fig)
+    elif status_select =='Recovered':
+        st.title("Total Recovered Cases Among states")
+        fig=px.scatter(df, x='State', y=df['Recovered'],
+	         size="Recovered",size_max=110)
+        st.plotly_chart(fig)
+    else:
+        st.title("Total Active Cases Among states")
+        fig=px.scatter(df, x='State', y=df['Active'],
+	         size="Active",size_max=110)
+        st.plotly_chart(fig)
+
 def get_table():
     datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths']].sort_values(by=['Confirmed'],ascending =False)
     return datatable
