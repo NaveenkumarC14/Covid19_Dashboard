@@ -37,7 +37,7 @@ image= a
 #image.close()
 
 st.markdown(
-    f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
+    f'<img src="data:image/gif;base64,{image}" alt="corona gif">',
     unsafe_allow_html=True,
 )
 
