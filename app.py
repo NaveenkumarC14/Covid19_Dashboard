@@ -17,7 +17,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from googleDriveFileDownloader import googleDriveFileDownload
-a=googleDriveFileDownload()
+a=googleDriveFileDownloader()
 a.downloadFile("https://drive.google.com/file/d/1aaq_cBChM-mPiDwefukBiwRKQ3Vt3JFv/view?usp=sharing")
 
 
