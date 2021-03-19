@@ -16,9 +16,9 @@ from PIL import Image
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-from googleDriveFileDownloader import googleDriveFileDownloader
-a=googleDriveFileDownloader()
-a.downloadFile("https://drive.google.com/file/d/1aaq_cBChM-mPiDwefukBiwRKQ3Vt3JFv/view?usp=sharing")
+#from googleDriveFileDownloader import googleDriveFileDownloader
+#a=googleDriveFileDownloader()
+#a.downloadFile("https://drive.google.com/file/d/1aaq_cBChM-mPiDwefukBiwRKQ3Vt3JFv/view?usp=sharing")
 
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
@@ -31,13 +31,13 @@ st.sidebar.title("Menu")
 
 
 #image = PhotoImage(file = 'C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif')
-image= a
-#contents = image.read()
-#data_url = base64.b64encode(contents).decode("utf-8")
-#image.close()
+image= open("1e4585a1cd51216e70f33db2954eb83c.gif",'rb')
+contents = image.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+image.close()
 
 st.markdown(
-    f'<img src="data:image/gif;base64,{image}" alt="corona gif">',
+    f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
     unsafe_allow_html=True,
 )
 
