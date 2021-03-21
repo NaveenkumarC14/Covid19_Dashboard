@@ -2,7 +2,7 @@
 """
 Created on Sun Oct  4 08:20:50 2020
 
-@author: Sathishkumar
+@author: Naveenkumar
 """
 
 
@@ -193,7 +193,7 @@ if selected_series == 'Confirmed Cases':
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Confirmed":"y"})
     model=Prophet()
     model.fit(prophet_df)
-    future=model.make_future_dataframe(periods=10)
+    future=model.make_future_dataframe(periods=30)
     forecast=model.predict(future)
     fig=plot_plotly(model,forecast)
     fig.update_layout(title="Forecast of Confirmed Cases",yaxis_title="Cases",xaxis_title="Date")
@@ -203,7 +203,7 @@ elif selected_series=="Death Cases":
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Deceased":"y"})
     model=Prophet()
     model.fit(prophet_df)
-    future=model.make_future_dataframe(periods=10)
+    future=model.make_future_dataframe(periods=30)
     forecast=model.predict(future)
     fig=plot_plotly(model,forecast)
     fig.update_layout(title="Forecast of Death Cases",yaxis_title="Cases",xaxis_title="Date")
@@ -213,7 +213,7 @@ elif selected_series=="Recovered Cases":
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Recovered":"y"})
     model=Prophet()
     model.fit(prophet_df)
-    future=model.make_future_dataframe(periods=10)
+    future=model.make_future_dataframe(periods=30)
     forecast=model.predict(future)
     fig=plot_plotly(model,forecast)
     fig.update_layout(title="Forecast of Recovered Cases",yaxis_title="Cases",xaxis_title="Date")
