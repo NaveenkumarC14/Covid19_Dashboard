@@ -120,7 +120,7 @@ st.markdown('''
       <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
     </div>
-  
+  </div>
  ''', unsafe_allow_html=True);
     
 def get_table():
