@@ -97,10 +97,10 @@ elif visualization =='Scatter Chart':
 	         size="Number of cases", color=total['Status'],size_max=60)    
         st.plotly_chart(fig)
    
-Total_Confirmed=int(df['Confirmed']).sum()
-Total_Death=int(df['Deaths']).sum()
-Total_Recovered=int(df['Recovered']).sum()
-Total_Active=int(df['Active']).sum()
+Total_Confirmed=df['Confirmed'].sum()
+Total_Death=df['Deaths'].sum()
+Total_Recovered=df['Recovered'].sum()
+Total_Active=df['Active'].sum()
 st.markdown('''
 <div class="col-sm-4">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Confirmed</p>
