@@ -104,17 +104,17 @@ Total_Active=df['Active'].sum()
 st.markdown('''
 <div class="col-sm-4">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Confirmed</p>
-      #<p style='text-align: center; font-size: 15px; color: #000'>[''' + str(Total_Confirmed) + ''']</p>
+      <p style='text-align: center; font-size: 15px; color: #000'>[''' + str(Total_Confirmed) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: #000'>''' + str(Total_Confirmed) + '''</p>
     </div>
     <div class="col-sm-4" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align: center; font-weight: 400 ; color: #000'>Total Deaths</p>
-      #<p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(Total_Death) + ''']</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(Total_Death) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(Total_Death) + '''</p>
     </div>
     <div class="col-sm-4">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
-      #<p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
     </div>
  ''', unsafe_allow_html=True);
