@@ -109,7 +109,7 @@ st.markdown('''
     </div>
     <div class="col-sm-4" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align: center; font-weight: 400 ; color: #000'>Total Deaths</p>
-     # <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(death_sign) + str(death_today) + ''']</p>
+      #<p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(death_sign) + str(death_today) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(Total_Death) + '''</p>
     </div>
     <div class="col-sm-4">
