@@ -203,7 +203,7 @@ elif selected_series=="Death Cases":
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Deceased":"y"})
     model=Prophet()
     model.fit(prophet_df)
-    future=model.make_future_dataframe(periods=30)
+    future=model.make_future_dataframe(periods=10)
     forecast=model.predict(future)
     fig=plot_plotly(model,forecast)
     fig.update_layout(title="Forecast of Death Cases",yaxis_title="Cases",xaxis_title="Date")
