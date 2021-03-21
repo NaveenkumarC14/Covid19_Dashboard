@@ -103,9 +103,9 @@ Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
 st.markdown('''
 <div class="col-sm-4">
-      <p style='text-align: margin; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
-      <p style='text-align: margin; font-size: 15px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
-      <p style='text-align: margin; font-size: 35px; font-weight: bold; color: #000'>''' + str(Total_Confirmed) + '''</p>
+      <p style='text-align: "margin"; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
+      <p style='text-align:"margin"; font-size: 15px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
+      <p style='text-align: "margin"; font-size: 35px; font-weight: bold; color: #000'>''' + str(Total_Confirmed) + '''</p>
     </div>
     <div class="col-sm-4" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align: center; font-weight: 400 ; color: #000'>Total Deaths</p>
