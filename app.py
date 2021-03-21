@@ -16,6 +16,9 @@ from PIL import Image
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+from fbprophet import Prophet
+from fbprophet.plot import plot_plotly
+
 #from googleDriveFileDownloader import googleDriveFileDownloader
 #a=googleDriveFileDownloader()
 #a.downloadFile("https://drive.google.com/file/d/1aaq_cBChM-mPiDwefukBiwRKQ3Vt3JFv/view?usp=sharing")
@@ -59,6 +62,9 @@ state_select = st.sidebar.selectbox('Select a state',df['State'].unique())
 status_select = st.sidebar.radio('Covid-19 patient status',('Confirmed','Active','Recovered','Deaths'))
 #select = st.sidebar.selectbox('Covid-19 patient status',('confirmed_cases','active_cases','recovered_cases','death_cases'))
 selected_state = df[df['State']==state_select]
+selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases', 'Death Cases', 'Recovered Cases'))
+#st.sidebar.text("Created By:-")
+st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 st.markdown("## **Overall Cases**")
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
@@ -181,3 +187,36 @@ def get_table():
 
 datatable = get_table()
 st.dataframe(datatable)
+df2 = pd.read_csv('https://api.covid19india.org/csv/latest/case_time_series.csv')
+if selected_series == 'Confirmed Cases':
+    st.markdown("## **Forecasting**")
+    prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Confirmed":"y"})
+    model=Prophet()
+    model.fit(prophet_df)
+    future=model.make_future_dataframe(periods=10)
+    forecast=model.predict(future)
+    fig=plot_plotly(model,forecast)
+    fig.update_layout(title="Forecast of Confirmed Cases",yaxis_title="Cases",xaxis_title="Date")
+    st.plotly_chart(fig)
+elif selected_series=="Death Cases":
+    st.markdown("## **Forecasting**")
+    prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Deceased":"y"})
+    model=Prophet()
+    model.fit(prophet_df)
+    future=model.make_future_dataframe(periods=10)
+    forecast=model.predict(future)
+    fig=plot_plotly(model,forecast)
+    fig.update_layout(title="Forecast of Death Cases",yaxis_title="Cases",xaxis_title="Date")
+    st.plotly_chart(fig)
+elif selected_series=="Recovered Cases":
+    st.markdown("## **Forecasting**")
+    prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Recovered":"y"})
+    model=Prophet()
+    model.fit(prophet_df)
+    future=model.make_future_dataframe(periods=10)
+    forecast=model.predict(future)
+    fig=plot_plotly(model,forecast)
+    fig.update_layout(title="Forecast of Recovered Cases",yaxis_title="Cases",xaxis_title="Date")
+    st.plotly_chart(fig)
+
+
