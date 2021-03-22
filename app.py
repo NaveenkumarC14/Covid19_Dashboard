@@ -101,6 +101,18 @@ Total_Confirmed=total['Number of cases'].iloc[0]
 Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
+st.markdown(
+'''
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125965720-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-125965720-2');
+</script>
+''', unsafe_allow_html=True
+    )
 st.markdown('''
 <h1></h1>
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
