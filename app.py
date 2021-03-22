@@ -85,7 +85,7 @@ Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
 
 st.markdown('''
-<h1></h1>
+
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
  <div class="row" style="background-color:#fff;width:100%;margin:auto;">
     <div class="row-sm-4">
