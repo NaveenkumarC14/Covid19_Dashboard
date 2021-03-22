@@ -66,6 +66,18 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 #st.sidebar.text("Created By:-")
 st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 st.markdown("## **Overall Cases**")
+
+
+
+df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+def get_total(df1):
+    total = pd.DataFrame({
+    'Status':['Confirmed', 'Active', 'Recovered','Deaths'],
+    'Number of cases':(df1.iloc[0]['Confirmed'],
+    df1.iloc[0]['Active'], 
+    df1.iloc[0]['Recovered'], df1.iloc[0]['Deaths'])})
+    return total
+total=get_total(df1)
 Total_Confirmed=total['Number of cases'].iloc[0]
 Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
@@ -98,16 +110,6 @@ st.markdown('''
   </div>
 </div>
  ''', unsafe_allow_html=True);
-df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
-def get_total(df1):
-    total = pd.DataFrame({
-    'Status':['Confirmed', 'Active', 'Recovered','Deaths'],
-    'Number of cases':(df1.iloc[0]['Confirmed'],
-    df1.iloc[0]['Active'], 
-    df1.iloc[0]['Recovered'], df1.iloc[0]['Deaths'])})
-    return total
-total=get_total(df1)
-
 if visualization=='Bar Chart':
     total_graph = px.bar(total, x='Status',y='Number of cases',
                                labels={'Number of cases':'Number of Total cases'},color='Status')
