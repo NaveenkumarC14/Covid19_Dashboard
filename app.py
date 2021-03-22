@@ -132,15 +132,43 @@ elif visualization =='Scatter Chart':
    
 
     
-def get_table():
-    datatable = total[['Status','Number of cases']]
-    return datatable
+#def get_table():
+ #   datatable = total[['Status','Number of cases']]
+ #   return datatable
 
-datatable = get_table()
-st.dataframe(datatable)
+#datatable = get_table()
+#st.dataframe(datatable)
 
 
 st.markdown("## **State level analysis**")
+st.markdown('''
+<h1></h1>
+<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
+ <div class="row" style="background-color:#fff;width:100%;margin:auto;">
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
+      <p style='text-align: center; font-size: 15px; color: red'>[''' + str(selected_state[Confirmed]) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(selected_state[Confirmed]) + '''</p>
+    </div>
+    <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
+      <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(Total_Death) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(Total_Death) + '''</p>
+    </div>
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
+     </div>
+     <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Active</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Active) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Active) + '''</p>
+     </div>
+  </div>
+</div>
+ ''', unsafe_allow_html=True);
+
 
 def get_total_dataframe(df):
     total_dataframe = pd.DataFrame({
