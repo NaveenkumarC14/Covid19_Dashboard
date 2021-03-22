@@ -83,30 +83,34 @@ Total_Confirmed=total['Number of cases'].iloc[0]
 Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
-st.markdown('''
- 
-<div id="col1" style=" position: absolute; top: 30%; left: 15%;">
-    <p style='text-align: center; font-weight: 400 ;color: navy'>Total Confirmed</p><br><br>
-    <p style='text-align: center; font-size: 15px; color: navy'>[10000000]</p><br><br>
-    <p style='text-align: center; font-size: 35px; font-weight: bold; color: navy'>10000000</p>
-  </div>
-  <div id="col2" style="position: absolute; top: 30%; left: 35%;">
-    <p style='text-align: center; font-weight: 400 ; color: red'>Total Deaths</p><br><br>
-    <p style='text-align: center; font-size: 15px; color:red'>[11111111]</p><br><br>
-    <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>11111111</p>
-  </div>
-  <div id="col3" style="position: absolute; top: 30%; left: 55%;">
-    <p style='text-align: center; font-weight: 400 ;color: #000'>Total Recovered</p><br><br>
-    <p style='text-align: center; font-size: 15px; color: #70a82c'>[12345678]</p><br><br>
-    <p style='text-align: center; font-size: 35px; font-weight: bold; color: #70a82c'>12345678</p>
-  </div>
 
-  <div id="col4" style="position: absolute; top: 30%; left: 75%;">
-    <p style='text-align: center; font-weight: 400 ;color: #2c66a8'>Active</p><br><br>
-    <p style='text-align: center; font-size: 15px; color: #2c66a8'>[87654321]</p><br><br>
-    <p style='text-align: center; font-size: 35px; font-weight: bold; color: #2c66a8'>87654321</p>
+st.markdown('''
+<h1></h1>
+<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
+ <div class="row" style="background-color:#fff;width:100%;margin:auto;">
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
+      <p style='text-align: center; font-size: 15px; color: red'>[''' + str(selected_state['Confirmed'].iloc[0]) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(selected_state['Confirmed'].iloc[0]) + '''</p>
+    </div>
+    <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
+      <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(selected_state['Deaths'].iloc[0]) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
+    </div>
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(selected_state['Recovered'].iloc[0]) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(selected_state['Recovered'].iloc[0]) + '''</p>
+     </div>
+     <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Active</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(selected_state['Active'].iloc[0]) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' +str(selected_state['Active'].iloc[0]) + '''</p>
+     </div>
   </div>
-''', unsafe_allow_html=True);
+</div>
+ ''', unsafe_allow_html=True);
 
 if visualization=='Bar Chart':
     total_graph = px.bar(total, x='Status',y='Number of cases',
