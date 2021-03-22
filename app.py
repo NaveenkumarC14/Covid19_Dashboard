@@ -66,7 +66,38 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 #st.sidebar.text("Created By:-")
 st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 st.markdown("## **Overall Cases**")
+Total_Confirmed=total['Number of cases'].iloc[0]
+Total_Death=total['Number of cases'].iloc[3]
+Total_Recovered=total['Number of cases'].iloc[2]
+Total_Active=total['Number of cases'].iloc[1]
 
+st.markdown('''
+<h1></h1>
+<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
+ <div class="row" style="background-color:#fff;width:100%;margin:auto;">
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
+      <p style='text-align: center; font-size: 15px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(Total_Confirmed) + '''</p>
+    </div>
+    <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
+      <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(Total_Death) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(Total_Death) + '''</p>
+    </div>
+    <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
+     </div>
+     <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
+      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Active) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Active) + '''</p>
+     </div>
+  </div>
+</div>
+ ''', unsafe_allow_html=True);
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
     total = pd.DataFrame({
@@ -97,44 +128,7 @@ elif visualization =='Scatter Chart':
 	         size="Number of cases", color=total['Status'],size_max=60)    
         st.plotly_chart(fig)
    
-Total_Confirmed=total['Number of cases'].iloc[0]
-Total_Death=total['Number of cases'].iloc[3]
-Total_Recovered=total['Number of cases'].iloc[2]
-Total_Active=total['Number of cases'].iloc[1]
-st.markdown(
-'''
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125965720-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-125965720-2');
-</script>
-''', unsafe_allow_html=True
-    )
-st.markdown('''
-<h1></h1>
-<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
- <div class="row" style="background-color:#fff;width:100%;margin:auto;">
-    <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
-      <p style='text-align: center; font-size: 15px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
-      <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(Total_Confirmed) + '''</p>
-    </div>
-    <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
-      <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
-      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(Total_Death) + ''']</p>
-      <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(Total_Death) + '''</p>
-    </div>
-    <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
-      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
-      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
-     </div>
-  </div>
-</div>
- ''', unsafe_allow_html=True);
+
     
 def get_table():
     datatable = total[['Status','Number of cases']]
