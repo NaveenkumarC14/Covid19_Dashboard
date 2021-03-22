@@ -100,7 +100,7 @@ html,body{
 
 
 
-}
+
 
 #col1{
     position: absolute;
