@@ -99,12 +99,7 @@ html,body{
 }
 
 
-h1{
-    position: relative;
-    top: 12%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: blueviolet;
+
 }
 
 #col1{
@@ -131,7 +126,7 @@ h1{
 </style>
 <body>
 
-    <h1>CORONA CASES IN INDIA</h1>
+    
 
 
 <div id="col1">
