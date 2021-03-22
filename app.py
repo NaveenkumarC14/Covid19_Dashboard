@@ -118,9 +118,9 @@ st.markdown('''
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
  <div class="row" style="background-color:#fff;width:100%;margin:auto;">
     <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 450 ;color: red'>Total Confirmed</p>
-      <p style='text-align: center; font-size: 10px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
-      <p style='text-align: center; font-size: 15px; font-weight: bold; color: red'>''' + str(Total_Confirmed) + '''</p>
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
+      <p style='text-align: center; font-size: 15px; color: red'>[''' + str(Total_Confirmed) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(Total_Confirmed) + '''</p>
     </div>
     <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
