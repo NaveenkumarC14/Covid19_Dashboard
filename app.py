@@ -55,7 +55,8 @@ def load_data():
     return df
 
 df = load_data()
-
+df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+df=df1.drop([0,37])
 visualization = st.sidebar.selectbox('Select a Chart type',('Bar Chart','Pie Chart','Line Chart','Scatter Chart'))
 #total=st.sidebar.selectbox('Select a Total Cases',df1['State'].iloc[0],)
 state_select = st.sidebar.selectbox('Select a state',df['State'].unique())
