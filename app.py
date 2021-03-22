@@ -105,7 +105,7 @@ st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
   <h2></h2><p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">Data Source: CSSE, John Hopkins University</p>
-  <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(country_df['last_update'][0]) + '''</p>
+  
   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">( Best viewed on Desktop. Use Landscape mode for Mobile View. )</p>
   <h2>__</h2><br><br><p style="margin: auto; font-weight: 500; text-align: center; width: 100%; font-size: 50px">World Stats</p>
 </div>
