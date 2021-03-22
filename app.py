@@ -102,7 +102,14 @@ Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
 st.markdown('''
-
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
+  <h2></h2><p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">Data Source: CSSE, John Hopkins University</p>
+  <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(country_df['last_update'][0]) + '''</p>
+  <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">( Best viewed on Desktop. Use Landscape mode for Mobile View. )</p>
+  <h2>__</h2><br><br><p style="margin: auto; font-weight: 500; text-align: center; width: 100%; font-size: 50px">World Stats</p>
+</div>
+<div class="jumbotron text-center" style='padding: 0px'>
  <div class="row" style="background-color:#fff;width:50%;margin:auto;">
     <div class="col-sm-3">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
@@ -119,8 +126,8 @@ st.markdown('''
       <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(Total_Recovered) + ''']</p>
       <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(Total_Recovered) + '''</p>
      </div>
- </div>
-
+  </div>
+</div>
  ''', unsafe_allow_html=True);
     
 def get_table():
