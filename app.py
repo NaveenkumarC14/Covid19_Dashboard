@@ -83,7 +83,82 @@ Total_Confirmed=total['Number of cases'].iloc[0]
 Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
+st.markdown('''
+ 
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+}
 
+html,body{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+
+h1{
+    position: relative;
+    top: 12%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+}
+
+#col1{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+#col2{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+#col3{
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+#col4{
+    position: absolute;
+    top: 30%;
+    left: 75%;
+}
+</style>
+<body>
+
+    <h1>CORONA CASES IN INDIA</h1>
+
+
+<div id="col1">
+    <p style='text-align: center; font-weight: 400 ;color: navy'>Total Confirmed</p><br><br>
+    <p style='text-align: center; font-size: 15px; color: navy'>[10000000]</p><br><br>
+    <p style='text-align: center; font-size: 35px; font-weight: bold; color: navy'>10000000</p>
+  </div>
+  <div id="col2">
+    <p style='text-align: center; font-weight: 400 ; color: red'>Total Deaths</p><br><br>
+    <p style='text-align: center; font-size: 15px; color:red'>[11111111]</p><br><br>
+    <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>11111111</p>
+  </div>
+  <div id="col3">
+    <p style='text-align: center; font-weight: 400 ;color: #000'>Total Recovered</p><br><br>
+    <p style='text-align: center; font-size: 15px; color: #70a82c'>[12345678]</p><br><br>
+    <p style='text-align: center; font-size: 35px; font-weight: bold; color: #70a82c'>12345678</p>
+  </div>
+
+  <div id="col4">
+    <p style='text-align: center; font-weight: 400 ;color: #2c66a8'>Active</p><br><br>
+    <p style='text-align: center; font-size: 15px; color: #2c66a8'>[87654321]</p><br><br>
+    <p style='text-align: center; font-size: 35px; font-weight: bold; color: #2c66a8'>87654321</p>
+  </div>
+
+
+</body>
+''', unsafe_allow_html=True);
 st.markdown('''
 <h1></h1>
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
