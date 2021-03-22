@@ -85,74 +85,27 @@ Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
 st.markdown('''
  
-<style>
-    *{
-    margin: 0%;
-    padding: 0%;
-}
-
-html,body{
-    margin: 0%;
-    padding: 0%;
-    height: 100%;
-    width: 100%;
-}
-
-
-
-
-
-#col1{
-    position: absolute;
-    top: 30%;
-    left: 15%;
-}
-
-#col2{
-    position: absolute;
-    top: 30%;
-    left: 35%;
-}
-#col3{
-    position: absolute;
-    top: 30%;
-    left: 55%;
-}
-#col4{
-    position: absolute;
-    top: 30%;
-    left: 75%;
-}
-</style>
-<body>
-
-    
-
-
-<div id="col1">
+<div id="col1" style=" position: absolute; top: 30%; left: 15%;">
     <p style='text-align: center; font-weight: 400 ;color: navy'>Total Confirmed</p><br><br>
     <p style='text-align: center; font-size: 15px; color: navy'>[10000000]</p><br><br>
     <p style='text-align: center; font-size: 35px; font-weight: bold; color: navy'>10000000</p>
   </div>
-  <div id="col2">
+  <div id="col2" style="position: absolute; top: 30%; left: 35%;">
     <p style='text-align: center; font-weight: 400 ; color: red'>Total Deaths</p><br><br>
     <p style='text-align: center; font-size: 15px; color:red'>[11111111]</p><br><br>
     <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>11111111</p>
   </div>
-  <div id="col3">
+  <div id="col3" style="position: absolute; top: 30%; left: 55%;">
     <p style='text-align: center; font-weight: 400 ;color: #000'>Total Recovered</p><br><br>
     <p style='text-align: center; font-size: 15px; color: #70a82c'>[12345678]</p><br><br>
     <p style='text-align: center; font-size: 35px; font-weight: bold; color: #70a82c'>12345678</p>
   </div>
 
-  <div id="col4">
+  <div id="col4" style="position: absolute; top: 30%; left: 75%;">
     <p style='text-align: center; font-weight: 400 ;color: #2c66a8'>Active</p><br><br>
     <p style='text-align: center; font-size: 15px; color: #2c66a8'>[87654321]</p><br><br>
     <p style='text-align: center; font-size: 35px; font-weight: bold; color: #2c66a8'>87654321</p>
   </div>
-
-
-</body>
 ''', unsafe_allow_html=True);
 
 if visualization=='Bar Chart':
