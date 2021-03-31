@@ -66,11 +66,7 @@ selected_state = df[df['State']==state_select]
 selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases', 'Death Cases', 'Recovered Cases'))
 #st.sidebar.text("Created By:-")
 #st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
-st.markdown("## **Overall Cases**")
 
-st.markdown('''
-<h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
-  ''', unsafe_allow_html=True);
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
@@ -86,6 +82,11 @@ Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
 
+st.markdown("## **Overall Cases**")
+
+st.markdown('''
+<h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
+  ''', unsafe_allow_html=True);
 st.markdown('''
 
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
