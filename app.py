@@ -105,7 +105,7 @@ st.markdown('''
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered) + '''</p>
      </div> 
-     <div class="row-sm-4">
+     <div class="row-sm-3">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active) + '''</p>
@@ -158,19 +158,19 @@ st.markdown('''
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: red'>''' + str(selected_state['Confirmed'].iloc[0]) + '''</p>
     </div>
     <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
-      <p style='text-align:center; font-weight: 400 ; color: #000'>Total Deaths</p>
-      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(selected_state['Deaths'].iloc[0]) + ''']</p>
-      <p style='text-align: center; font-size: 35px; font-weight: bold; color: #e73631'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
+      <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(selected_state['Deaths'].iloc[0])-str(selected_state['Deaths'].iloc[1]) + ''']</p>
+      <p style='text-align: center; font-size: 35px; font-weight: bold; color: black'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
     </div>
     <div class="row-sm-4">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
-      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(selected_state['Recovered'].iloc[0]) + ''']</p>
-      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' + str(selected_state['Recovered'].iloc[0]) + '''</p>
+      <p style='text-align: center; font-size: 15px; color: green'>[''' + str(selected_state['Recovered'].iloc[0]) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color:green'>''' + str(selected_state['Recovered'].iloc[0]) + '''</p>
      </div>
      <div class="row-sm-4">
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Active</p>
-      <p style='text-align: center; font-size: 15px; color: #70a82c'>[''' + str(selected_state['Active'].iloc[0]) + ''']</p>
-      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: #70a82c'>''' +str(selected_state['Active'].iloc[0]) + '''</p>
+      <p style='text-align: center; font-size: 15px; color: blue'>[''' + str(selected_state['Active'].iloc[0]) + ''']</p>
+      <p style='text-align: center ; font-size: 35px; font-weight: bold; color: blue'>''' +str(selected_state['Active'].iloc[0]) + '''</p>
      </div>
   </div>
 </div>
