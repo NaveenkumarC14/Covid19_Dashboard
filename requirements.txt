@@ -36,6 +36,6 @@ wordcloud==1.8.1
 yarg==0.1.9
 zipp==3.4.0
 googleDriveFileDownloader==1.2.0
-fbprophet==0.6
+fbprophet
 plotly
 plotly-express==0.4.1
