@@ -43,9 +43,7 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
     unsafe_allow_html=True,
 )
-st.markdown('''
-<h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
-  ''', unsafe_allow_html=True);
+
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
 #st.markdown('<style>body{background-color: lightblue;}</style>',unsafe_allow_html=True)
@@ -70,7 +68,9 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 #st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 st.markdown("## **Overall Cases**")
 
-
+st.markdown('''
+<h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
+  ''', unsafe_allow_html=True);
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
