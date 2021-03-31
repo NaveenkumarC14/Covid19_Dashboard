@@ -67,7 +67,7 @@ status_select = st.sidebar.radio('Covid-19 patient status',('Confirmed','Active'
 selected_state = df[df['State']==state_select]
 selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases', 'Death Cases', 'Recovered Cases'))
 #st.sidebar.text("Created By:-")
-st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
+#st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 st.markdown("## **Overall Cases**")
 
 
