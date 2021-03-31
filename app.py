@@ -104,7 +104,12 @@ st.markdown('''
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
       <p style='text-align: center; font-size: 15px; color: green'>[''' + str(Total_Recovered) + ''']</p>
       <p style='text-align: center ; font-size: 42px; font-weight: bold; color: green'>''' + str(Total_Recovered) + '''</p>
-     </div>    
+     </div> 
+     <div class="row-sm-4">
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
+      <p style='text-align: center; font-size: 15px; color: green'></p>
+      <p style='text-align: center ; font-size: 42px; font-weight: bold; color: blue'>''' + str(Total_Active) + '''</p>
+     </div>
   </div>
 </div>
  ''', unsafe_allow_html=True);
