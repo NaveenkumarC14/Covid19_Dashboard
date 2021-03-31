@@ -289,4 +289,18 @@ elif selected_series=="Recovered Cases":
     fig.update_layout(title="Forecast of Recovered Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 
-
+st.markdown(
+    '''
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class='jumbotron text-center footer' style='background-color: #fff;'>
+    <div class='row'>
+        <div class='col-md-12'>
+            <p style='font-weight: 400'>______</p>
+            <p style='font-weight: 400'>Designed, Developed and Maintained by Naveenkumar C</p>
+            <p>Contact <a href='mailto:naveekumarc14@gmail.com'>naveekumarc14@gmail.com</a> to report issues<p>
+        </div>
+    </div>
+<div>
+    ''',
+    unsafe_allow_html=True
+)
