@@ -37,6 +37,7 @@ yarg==0.1.9
 zipp==3.4.0
 googleDriveFileDownloader==1.2.0
 fbprophet==0.6
+Prophet
 
 plotly
 plotly-express==0.4.1
