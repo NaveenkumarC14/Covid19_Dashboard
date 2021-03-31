@@ -159,7 +159,7 @@ st.markdown('''
     </div>
     <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
-      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(selected_state['Deaths'].iloc[0])-str(selected_state['Deaths'].iloc[1]) + ''']</p>
+      <p style='text-align: center; font-size: 15px; color: #e73631'>[''' + str(selected_state['Deaths'].iloc[0]-selected_state['Deaths'].iloc[1]) + ''']</p>
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: black'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
     </div>
     <div class="row-sm-4">
