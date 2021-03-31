@@ -163,12 +163,12 @@ st.markdown('''
       <p style='text-align: center; font-size: 35px; font-weight: bold; color: black'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
     </div>
     <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Recovered</p>
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 35px; font-weight: bold; color:green'>''' + str(selected_state['Recovered'].iloc[0]) + '''</p>
      </div>
      <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: #000'>Total Active</p>
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
       <p style='text-align: center; font-size: 15px; color: blue'></p>
       <p style='text-align: center ; font-size: 35px; font-weight: bold; color: blue'>''' +str(selected_state['Active'].iloc[0]) + '''</p>
      </div>
