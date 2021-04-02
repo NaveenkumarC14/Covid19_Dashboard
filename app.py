@@ -127,7 +127,7 @@ elif visualization=='Pie Chart':
         st.plotly_chart(fig)
 elif visualization =='Line Chart':
         st.title("Total Cases")
-        fig = px.line(total,x=total['Status'],y=total['Number of cases'],color=total['Status'])
+        fig = px.line(total,x=total['Status'],y=total['Number of cases'])
         st.plotly_chart(fig)
 elif visualization =='Scatter Chart':
         #fig=px.scatter(total, x=total['Status'], y=total['Number of cases'], color=total['Status'],size=total['Number of cases'])
