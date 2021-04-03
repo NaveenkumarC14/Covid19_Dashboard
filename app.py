@@ -88,8 +88,14 @@ Total_Confirmed=total['Number of cases'].iloc[0]
 Total_Death=total['Number of cases'].iloc[3]
 Total_Recovered=total['Number of cases'].iloc[2]
 Total_Active=total['Number of cases'].iloc[1]
-
-st.markdown("## **Overall Cases**")
+st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">Overall Cases</h1>
+  
+  
+</div>
+''', unsafe_allow_html=True);
+#st.markdown("## **Overall Cases**")
 
 st.markdown('''
 <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
