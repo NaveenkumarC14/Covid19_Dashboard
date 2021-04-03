@@ -31,10 +31,12 @@ import base64
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
-  </div>
+  <h2></h2><p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">It shows Coronavirus Cases and Forecasting in India</p>
+  
+</div>
 ''', unsafe_allow_html=True);
-st.title('Covid-19 India Cases')
-st.write("It shows ***Coronavirus Cases*** and ***Forecasting*** in India")
+#st.title('Covid-19 India Cases')
+#st.write("It shows ***Coronavirus Cases*** and ***Forecasting*** in India")
 st.sidebar.title("Menu")
 
 
