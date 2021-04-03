@@ -260,7 +260,7 @@ st.dataframe(datatable)
 st.markdown("## **District level analysis**")
 dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[1:765]
-dis=dis2.drop(609)
+dis=dis2.drop(607)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
 def get_table():
