@@ -29,7 +29,7 @@ df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 #import streamlit as st
 import base64
 st.title('Covid-19 India Cases')
-st.write("It shows ***Coronavirus Cases*** in India")
+st.write("It shows ***Coronavirus Cases*** and ***Forecasting*** in India")
 st.sidebar.title("Menu")
 
 
