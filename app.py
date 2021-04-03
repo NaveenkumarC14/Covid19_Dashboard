@@ -254,6 +254,10 @@ elif visualization =='Scatter Chart':
 def get_table():
     datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths']].sort_values(by=['Confirmed'],ascending =False)
     return datatable
+st.markdown("## **District level analysis**")
+dis=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
+state_select1 = st.sidebar.selectbox('Select a state',dis['State'].unique())
+
 
 datatable = get_table()
 st.dataframe(datatable)
