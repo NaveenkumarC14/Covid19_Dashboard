@@ -28,6 +28,11 @@ df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 
 #import streamlit as st
 import base64
+st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
+  </div>
+''', unsafe_allow_html=True);
 st.title('Covid-19 India Cases')
 st.write("It shows ***Coronavirus Cases*** and ***Forecasting*** in India")
 st.sidebar.title("Menu")
