@@ -153,10 +153,14 @@ elif visualization =='Scatter Chart':
 #datatable = get_table()
 #st.dataframe(datatable)
 
-
-st.markdown("## **State level analysis**")
 st.markdown('''
-<h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(selected_state['Last_Updated_Time'].iloc[0]) + '''</p>
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">State level analysis</h1>
+#st.markdown("## **State level analysis**")
+</div>
+ ''', unsafe_allow_html=True);
+st.markdown('''
+<p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(selected_state['Last_Updated_Time'].iloc[0]) + '''</p>
   ''', unsafe_allow_html=True);
 st.markdown('''
 <h1></h1>
@@ -266,7 +270,13 @@ def get_table():
 datatable = get_table()
 st.dataframe(datatable)
 
-st.markdown("## **District level analysis**")
+st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">District level analysis</h1>
+</div>
+ ''', unsafe_allow_html=True);
+
+#st.markdown("## **District level analysis**")
 dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[1:765]
 dis=dis2.drop(607)
@@ -281,7 +291,12 @@ st.dataframe(datatable)
 
 df2 = pd.read_csv('https://api.covid19india.org/csv/latest/case_time_series.csv')
 if selected_series == 'Confirmed Cases':
-    st.markdown("## **Forecasting**")
+    st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">Forecasting*</h1>
+</div>
+ ''', unsafe_allow_html=True);
+   # st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Confirmed":"y"})
     model=Prophet()
     model.fit(prophet_df)
