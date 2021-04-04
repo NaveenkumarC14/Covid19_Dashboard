@@ -319,7 +319,7 @@ if selected_series == 'Confirmed Cases':
     fig.update_layout(title="Forecast of Confirmed Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 elif selected_series=="Death Cases":
-    st.markdown("## **Forecasting**")
+    #st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Deceased":"y"})
     model=Prophet()
     model.fit(prophet_df)
@@ -330,7 +330,7 @@ elif selected_series=="Death Cases":
     st.plotly_chart(fig)
 elif selected_series=="Recovered Cases":
 	
-    st.markdown("## **Forecasting**")
+    #st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Recovered":"y"})
     model=Prophet()
     model.fit(prophet_df)
