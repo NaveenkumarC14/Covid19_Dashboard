@@ -156,14 +156,13 @@ elif visualization =='Scatter Chart':
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">State level analysis</h1>
-#st.markdown("## **State level analysis**")
 </div>
  ''', unsafe_allow_html=True);
 st.markdown('''
 <p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(selected_state['Last_Updated_Time'].iloc[0]) + '''</p>
   ''', unsafe_allow_html=True);
 st.markdown('''
-<h1></h1>
+
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
  <div class="row" style="background-color:#fff;width:100%;margin:auto;">
     <div class="row-sm-4">
