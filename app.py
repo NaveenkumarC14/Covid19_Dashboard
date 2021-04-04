@@ -288,12 +288,15 @@ st.dataframe(datatable)
 
 
 df2 = pd.read_csv('https://api.covid19india.org/csv/latest/case_time_series.csv')
-if selected_series == 'Confirmed Cases':
-    st.markdown('''
+if selected_series=('Confirmed Cases' or 'Death Cases' or 'Death Cases' or 'Recovered Cases'):
+	st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">Forecasting</h1>
 </div>
  ''', unsafe_allow_html=True);
+	
+if selected_series == 'Confirmed Cases':
+    
    # st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Confirmed":"y"})
     model=Prophet()
