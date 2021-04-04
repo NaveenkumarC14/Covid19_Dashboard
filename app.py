@@ -304,7 +304,7 @@ if selected_series == 'Confirmed Cases':
     fig.update_layout(title="Forecast of Confirmed Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 elif selected_series=="Death Cases":
-	st.markdown('''
+     st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">Forecasting</h1>
 </div>
