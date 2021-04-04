@@ -314,12 +314,8 @@ elif selected_series=="Death Cases":
     fig.update_layout(title="Forecast of Death Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 elif selected_series=="Recovered Cases":
-	st.markdown('''
-<div class="jumbotron text-center" style='background-color: #fff'>
-  <h1 style="margin: auto; width: 100%;">Forecasting</h1>
-</div>
- ''', unsafe_allow_html=True);
-    #st.markdown("## **Forecasting**")
+	
+    st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Recovered":"y"})
     model=Prophet()
     model.fit(prophet_df)
