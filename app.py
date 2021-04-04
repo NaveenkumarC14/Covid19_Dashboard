@@ -271,6 +271,7 @@ st.dataframe(datatable)
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">District level analysis</h1>
+   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(selected_state['Last_Updated_Time'].iloc[0]) + '''</p>
 </div>
  ''', unsafe_allow_html=True);
 
