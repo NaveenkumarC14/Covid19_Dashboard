@@ -291,7 +291,7 @@ df2 = pd.read_csv('https://api.covid19india.org/csv/latest/case_time_series.csv'
 if selected_series == 'Confirmed Cases':
     st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
-  <h1 style="margin: auto; width: 100%;">Forecasting*</h1>
+  <h1 style="margin: auto; width: 100%;">Forecasting</h1>
 </div>
  ''', unsafe_allow_html=True);
    # st.markdown("## **Forecasting**")
@@ -304,7 +304,12 @@ if selected_series == 'Confirmed Cases':
     fig.update_layout(title="Forecast of Confirmed Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 elif selected_series=="Death Cases":
-    st.markdown("## **Forecasting**")
+	st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">Forecasting</h1>
+</div>
+ ''', unsafe_allow_html=True);
+    #st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Deceased":"y"})
     model=Prophet()
     model.fit(prophet_df)
@@ -314,7 +319,12 @@ elif selected_series=="Death Cases":
     fig.update_layout(title="Forecast of Death Cases",yaxis_title="Cases",xaxis_title="Date")
     st.plotly_chart(fig)
 elif selected_series=="Recovered Cases":
-    st.markdown("## **Forecasting**")
+	st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+  <h1 style="margin: auto; width: 100%;">Forecasting</h1>
+</div>
+ ''', unsafe_allow_html=True);
+    #st.markdown("## **Forecasting**")
     prophet_df=df2.rename(columns={'Date_YMD':"ds","Total Recovered":"y"})
     model=Prophet()
     model.fit(prophet_df)
