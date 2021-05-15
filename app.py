@@ -83,7 +83,8 @@ aa=total.iloc[0]
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">''' + str(total.iloc[0,len(aa)-1]) + ''':Vaccine Doses Administered</p>
+   <h1 style="margin: auto; font-weight: 400; text-align: center; width: 100%;">''' + str(total.iloc[0,len(aa)-1]) + ''' Vaccine Doses Administered</h1>
+<h2></h2>
 </div>
 ''', unsafe_allow_html=True);
 
