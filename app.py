@@ -87,7 +87,7 @@ st.markdown('''
 
 
 tested=st.selectbox('Choose Testing and Vaccine Stats',('Vaccine Doses','Tested'))
-if tested=='Vaccine Doses':
+#if tested=='Vaccine Doses':
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
