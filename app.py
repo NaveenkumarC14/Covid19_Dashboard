@@ -82,7 +82,7 @@ total=vaccine[vaccine['State']=='Total']
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">''' + str(total.iloc[:,-1]) :Vaccine Doses Administered+ '''</p>
+   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">''' + str(total.iloc[:,-1]) + ''':Vaccine Doses Administered</p>
 </div>
 ''', unsafe_allow_html=True);
 
