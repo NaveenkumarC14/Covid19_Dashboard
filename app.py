@@ -25,6 +25,9 @@ from fbprophet.plot import plot_plotly
 
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
+vaccine=pd.read_csv("http://api.covid19india.org/csv/latest/vaccine_doses_statewise.csv")
+test=pd.read_csv('https://api.covid19india.org/csv/latest/statewise_tested_numbers_data.csv')
+
 
 #import streamlit as st
 import base64
@@ -70,10 +73,21 @@ state_select = st.sidebar.selectbox('Select a state',df['State'].unique())
 status_select = st.sidebar.radio('Covid-19 patient status',('Confirmed','Active','Recovered','Deaths'))
 #select = st.sidebar.selectbox('Covid-19 patient status',('confirmed_cases','active_cases','recovered_cases','death_cases'))
 selected_state = df[df['State']==state_select]
+
 selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases', 'Death Cases', 'Recovered Cases'))
 #st.sidebar.text("Created By:-")
 #st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 
+st.markdown('''
+<div class="jumbotron text-center" style='background-color: #fff'>
+ 
+   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(total.iloc[:,-1]) + '''</p>
+</div>
+''', unsafe_allow_html=True);
+
+
+tested=st.selectbox('Choose Testing and Vaccine Stats',('Vaccine Doses','Tested'))
+if tested=='Vaccine Doses':
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
