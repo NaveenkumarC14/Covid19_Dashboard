@@ -78,10 +78,11 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 #st.sidebar.text("Created By:-")
 #st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 
+total=vaccine[vaccine['State']=='Total']
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(total.iloc[:,-1]) + '''</p>
+   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">''' + str(total.iloc[:,-1]) :Vaccine Doses Administered+ '''</p>
 </div>
 ''', unsafe_allow_html=True);
 
