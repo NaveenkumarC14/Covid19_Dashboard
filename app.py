@@ -71,8 +71,8 @@ dis_vac=pd.read_csv('http://api.covid19india.org/csv/latest/cowin_vaccine_data_d
 dis_vac_new=dis_vac.iloc[:,[5,-2,-1]]
 new1=dis_vac_new.drop(0)
 new=new1.fillna(0)
-new['15/05/2021.8']=new['15/05/2021.8'].astype(int)
-new['15/05/2021.9']=new['15/05/2021.9'].astype(int)
+new.iloc[:,-2]=new.iloc[:,-2].astype(int)
+new.iloc[:,-1]=new.iloc[:,-1].astype(int)
 new["Vaccine"]=new.sum(axis=1)
 
 visualization = st.sidebar.selectbox('Select a Chart type',('Bar Chart','Pie Chart','Line Chart','Scatter Chart'))
