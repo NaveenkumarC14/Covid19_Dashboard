@@ -87,6 +87,7 @@ def special_format(n):
     return "".join([r] + d)
 va=vaccine.iloc[:,[0,-1]]
 df=pd.merge(df,va)
+df
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
     <h1 style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
