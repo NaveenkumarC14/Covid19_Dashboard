@@ -89,7 +89,7 @@ def special_format(n):
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h1 style="margin: auto;color: green; width: 100%;">''' + str(special_format(b)) + ''' Vaccine Doses Administered</h1>
+   <h1 style="margin: auto;color: green; width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
 <h2></h2>
 </div>
 ''', unsafe_allow_html=True);
