@@ -313,11 +313,11 @@ dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[2:776]
 dis3=dis2.drop(607)
 dis=dis3.drop([769,772])
-dis=pd.merge(dis,new)
+#dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
 def get_table():
-    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
+    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
