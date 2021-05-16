@@ -86,8 +86,7 @@ def special_format(n):
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
     return "".join([r] + d)
 va=vaccine.iloc[:,[0,-1]]
-va.columns.values[1]='Total Tested'
-va
+va.columns.values[1]='Vaccine Doses Administered'
 df=pd.merge(df,va)
 #df=df.rename(columns={'va'
 st.markdown('''
@@ -289,7 +288,7 @@ elif visualization =='Scatter Chart':
         st.plotly_chart(fig)
 
 def get_table():
-    datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths','Total Tested']].sort_values(by=['Confirmed'],ascending =False)
+    datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths',special_format(['Total Tested'])].sort_values(by=['Confirmed'],ascending =False)
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
