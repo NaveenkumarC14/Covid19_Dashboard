@@ -317,7 +317,7 @@ dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
 def get_table():
-    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
+    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
