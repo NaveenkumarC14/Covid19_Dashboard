@@ -67,6 +67,14 @@ def load_data():
 df = load_data()
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 df=df1.drop([0,37])
+dis_vac=pd.read_csv('http://api.covid19india.org/csv/latest/cowin_vaccine_data_districtwise.csv')
+dis_vac_new=dis_vac.iloc[:,[5,-2,-1]]
+new1=dis_vac_new.drop(0)
+new=new1.fillna(0)
+new['15/05/2021.8']=new['15/05/2021.8'].astype(int)
+new['15/05/2021.9']=new['15/05/2021.9'].astype(int)
+new["Vaccine"]=new.sum(axis=1)
+
 visualization = st.sidebar.selectbox('Select a Chart type',('Bar Chart','Pie Chart','Line Chart','Scatter Chart'))
 #total=st.sidebar.selectbox('Select a Total Cases',df1['State'].iloc[0],)
 state_select = st.sidebar.selectbox('Select a state',df['State'].unique())
@@ -304,10 +312,11 @@ st.markdown('''
 dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[1:765]
 dis=dis2.drop(607)
+dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
 def get_table():
-    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
+    datatable = selected_state1[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
