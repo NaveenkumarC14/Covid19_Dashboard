@@ -81,11 +81,15 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 total=vaccine[vaccine['State']=='Total']
 aa=total.iloc[0]
 total=int(total.iloc[0,len(aa)-1])
+def special_format(n):
+    s, *d = str(n).partition(".")
+    r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
+    return "".join([r] + d)
 
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h1 style="margin: auto;color: green; width: 100%;">''' + str(f'{total:,d}') + ''' Vaccine Doses Administered</h1>
+   <h1 style="margin: auto;color: green; width: 100%;">''' + str(special_format(b)) + ''' Vaccine Doses Administered</h1>
 <h2></h2>
 </div>
 ''', unsafe_allow_html=True);
