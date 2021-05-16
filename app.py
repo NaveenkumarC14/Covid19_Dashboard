@@ -118,9 +118,11 @@ st.markdown('''
 <div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
  <div class="row" style="background-color:#fff;width:100%;margin:auto;">
     <div class="row-sm-3">
+    <button>
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
       <p style='text-align: center; font-size: 15px; color: red'></p>
       <p style='text-align: center; font-size: 40px; font-weight: 600; color: red'>''' + str(Total_Confirmed) + '''</p>
+    </button>
     </div>
     <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
