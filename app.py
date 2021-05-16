@@ -85,7 +85,7 @@ total=int(total.iloc[0,len(aa)-1])
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
  
-   <h1 style="margin: auto;color: green; width: 100%;">''' + str(f'{total:,d}) + ''' Vaccine Doses Administered</h1>
+   <h1 style="margin: auto;color: green; width: 100%;">''' + str(f'{total:,d}') + ''' Vaccine Doses Administered</h1>
 <h2></h2>
 </div>
 ''', unsafe_allow_html=True);
