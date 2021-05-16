@@ -85,7 +85,7 @@ def special_format(n):
     s, *d = str(n).partition(".")
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
     return "".join([r] + d)
-va=vaccine.iloc[0,[0:-1]]
+va=vaccine.iloc[:,[0,-1]]
 df=pd.merge(df,va)
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
