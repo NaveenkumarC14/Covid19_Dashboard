@@ -122,7 +122,7 @@ st.markdown('''
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
       <p style='text-align: center; font-size: 15px; color: red'></p>
       <p style='text-align: center; font-size: 40px; font-weight: 600; color: red'>''' + str(Total_Confirmed) + '''</p>
-    </button>
+    
     </div>
     <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
@@ -138,7 +138,8 @@ st.markdown('''
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active) + '''</p>
-     </div>
+    </button>
+    </div>
   </div>
 </div>
  ''', unsafe_allow_html=True);
