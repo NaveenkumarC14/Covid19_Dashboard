@@ -288,7 +288,7 @@ elif visualization =='Scatter Chart':
         st.plotly_chart(fig)
 
 def get_table():
-    datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths',,special_format(df['Vaccine Doses Administered'])]].sort_values(by=['Confirmed'],ascending =False)
+    datatable = df[['State', 'Confirmed', 'Active', 'Recovered','Deaths',special_format(df['Vaccine Doses Administered'])]].sort_values(by=['Confirmed'],ascending =False)
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
