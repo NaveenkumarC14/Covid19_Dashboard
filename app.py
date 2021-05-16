@@ -95,7 +95,7 @@ def special_format(n):
     return "".join([r] + d)
 va=vaccine.iloc[:,[0,-1]]
 va.columns.values[1]='Vaccine'
-df=pd.merge(df,va)
+#df=pd.merge(df,va)
 #df=df.rename(columns={'va'
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
