@@ -86,7 +86,7 @@ def special_format(n):
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
     return "".join([r] + d)
 va=vaccine.iloc[:,[0,-1]]
-#va=va.rename(columns={va.iloc[:,-1]:'Total Tested'})
+va.columns.values[1]='Total Tested'
 va
 df=pd.merge(df,va)
 #df=df.rename(columns={'va'
