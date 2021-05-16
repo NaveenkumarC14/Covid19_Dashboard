@@ -95,7 +95,7 @@ def special_format(n):
     return "".join([r] + d)
 va=vaccine.iloc[:,[0,-1]]
 va.columns.values[1]='Vaccine'
-#df=pd.merge(df,va)
+df=pd.merge(df,va)
 #df=df.rename(columns={'va'
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
@@ -312,7 +312,7 @@ st.markdown('''
 dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[1:765]
 dis=dis2.drop(607)
-dis=pd.merge(dis,new)
+#dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
 def get_table():
