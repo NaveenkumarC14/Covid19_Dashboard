@@ -104,6 +104,7 @@ st.markdown('''
 </div>
 ''', unsafe_allow_html=True);
 
+state_wise_daily=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
 
 tested=st.selectbox('Choose Testing and Vaccine Stats',('Vaccine Doses','Tested'))
 #if tested=='Vaccine Doses':
@@ -169,7 +170,8 @@ elif visualization=='Pie Chart':
         st.plotly_chart(fig)
 elif visualization =='Line Chart':
         st.title("Total Cases")
-        fig = px.line(total,x=total['Status'],y=total['Number of cases'])
+        fig = px.line(state_wise_daily, x="Date", y="TT", color="Status",
+              line_group="Status", hover_name="Status")
         st.plotly_chart(fig)
 elif visualization =='Scatter Chart':
         #fig=px.scatter(total, x=total['Status'], y=total['Number of cases'], color=total['Status'],size=total['Number of cases'])
@@ -185,7 +187,7 @@ elif visualization =='Scatter Chart':
 
 #datatable = get_table()
 #st.dataframe(datatable)
-total
+
 
 
 
