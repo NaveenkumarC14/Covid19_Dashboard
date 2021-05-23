@@ -186,7 +186,10 @@ elif visualization =='Scatter Chart':
 #datatable = get_table()
 #st.dataframe(datatable)
 total
-fig=px.line(total, x='Status',y="Number of cases", color='Status')
+fig=go.Figure
+fig.add_trace(go.Scatter(y=total['Number of cases'],
+                    mode='lines',
+                    name='lines'))
 st.plotly_chart(fig)
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
