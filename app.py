@@ -185,7 +185,7 @@ elif visualization =='Scatter Chart':
 
 #datatable = get_table()
 #st.dataframe(datatable)
-
+total
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">State level analysis</h1>
