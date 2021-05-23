@@ -186,11 +186,15 @@ elif visualization =='Scatter Chart':
 #datatable = get_table()
 #st.dataframe(datatable)
 total
-fig=go.Figure
-fig.add_trace(go.Scatter(y=total['Number of cases'],
-                    mode='lines',
-                    name='lines'))
-st.plotly_chart(fig)
+
+
+
+
+
+
+
+
+
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">State level analysis</h1>
