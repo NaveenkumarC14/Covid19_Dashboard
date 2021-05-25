@@ -53,19 +53,12 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
     unsafe_allow_html=True,
 )
-from PIL import Image
-import streamlit as st
 
-feature_choice2 = st.sidebar.multiselect("Plot Size")
-if st.button('Find Blueprint'):
-    if feature_choice2 == '3-marla':
-        image = Image.open('1e4585a1cd51216e70f33db2954eb83c.gif')
-        st.image(image, caption='3 marla plot',use_column_width=True)
 	
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://photos.app.goo.gl/4dtkpRX9xGcy4b25A");
+background-image: open("1e4585a1cd51216e70f33db2954eb83c.gif");
 background-size: cover;
 }
 </style>
