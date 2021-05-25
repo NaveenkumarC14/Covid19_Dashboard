@@ -53,6 +53,15 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
     unsafe_allow_html=True,
 )
+from PIL import Image
+import streamlit as st
+
+feature_choice2 = st.sidebar.multiselect("Plot Size", task2)
+if st.button('Find Blueprint'):
+    if feature_choice2 == '3-marla':
+        image = Image.open('1e4585a1cd51216e70f33db2954eb83c.gif')
+        st.image(image, caption='3 marla plot',use_column_width=True)
+	
 page_bg_img = '''
 <style>
 body {
@@ -61,7 +70,6 @@ background-size: cover;
 }
 </style>
 '''
-
 st.markdown(page_bg_img, unsafe_allow_html=True)
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
