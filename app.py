@@ -103,7 +103,7 @@ total_test=int(total_test1)
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
     <h1 style="margin: auto: width: 100%;">''' + str(special_format(total_test)) + ''' Tested</h1>
-    <h2 style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h2>
+    <h1 total_test style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
 <h3></h3>
 </div>
 ''', unsafe_allow_html=True);
