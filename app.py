@@ -35,7 +35,8 @@ st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
   <h2></h2><p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">It shows Coronavirus Cases and Forecasting in India</p>
-  <p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">Best Viewed on Desktop.Use Landscape or Desktop mode for Mobile View</p>
+  <h3></h3>
+  <p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">(Best Viewed on Desktop.Use Landscape or Desktop mode for Mobile View)</p>
   
 </div>
 ''', unsafe_allow_html=True);
