@@ -118,7 +118,7 @@ if Daily=='Recovered':
 	Recovered=df[df['Status']=='Recovered']
 	fig=px.bar(Recovered,x='Date',y="TT",labels={'Date':'Number of Total cases'})
 	st.plotly_chart(fig)
-if Daily=='Deceased:
+if Daily=='Deceased':
 	Deceased=df[df['Status']=='Deceased']
 	fig=px.bar(Recovered,x='Date',y="TT",labels={'Date':'Number of Total cases'})
 	st.plotly_chart(fig)
