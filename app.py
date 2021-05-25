@@ -53,7 +53,16 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="corona gif">',
     unsafe_allow_html=True,
 )
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
 
+st.markdown(page_bg_img, unsafe_allow_html=True)
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
 #st.markdown('<style>body{background-color: lightblue;}</style>',unsafe_allow_html=True)
