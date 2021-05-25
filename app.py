@@ -55,7 +55,6 @@ st.markdown(
 )
 
 	
-st.markdown(page_bg_img, unsafe_allow_html=True)
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
 #st.markdown('<style>body{background-color: lightblue;}</style>',unsafe_allow_html=True)
