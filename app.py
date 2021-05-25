@@ -183,7 +183,7 @@ elif visualization=='Pie Chart':
         st.plotly_chart(fig)
 elif visualization =='Line Chart':
         #st.title("Total Cases")
-        fig = px.line(state_wise_daily, x="Date", y="TT", color="Status",
+        fig = px.line(state_wise_daily, x="Date", y="TT",labels={'TT':'Number of Total cases'}, color="Status",
               line_group="Status", hover_name="Status")
         st.plotly_chart(fig)
 elif visualization =='Scatter Chart':
