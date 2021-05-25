@@ -120,7 +120,7 @@ if Daily=='Recovered':
 	st.plotly_chart(fig)
 if Daily=='Deceased':
 	Deceased=state_wise_daily[state_wise_daily['Status']=='Deceased']
-	fig=px.bar(Recovered,x='Date',y="TT",labels={'Date':'Number of Total cases'})
+	fig=px.bar(Deceased,x='Date',y="TT",labels={'Date':'Number of Total cases'})
 	st.plotly_chart(fig)
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
