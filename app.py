@@ -162,7 +162,6 @@ st.markdown('''
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered) + '''</p>    
      </div>     
-    
   </div>
 </div>
  ''', unsafe_allow_html=True);
