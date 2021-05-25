@@ -109,7 +109,7 @@ st.markdown('''
 ''', unsafe_allow_html=True);
 
 state_wise_daily=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
-Daily=st.radio('**Daily**',('None','Confirmed','Recovered','Active','Deaths','Tested','Vaccine'))
+Daily=st.selectbox('Daily',('None','Confirmed','Recovered','Active','Deaths','Tested','Vaccine'))
 #if tested=='Vaccine Doses':
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
