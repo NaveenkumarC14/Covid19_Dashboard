@@ -35,6 +35,7 @@ st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">COVID-19 Interactive Dashboard</h1>
   <h2></h2><p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">It shows Coronavirus Cases and Forecasting in India</p>
+  <p style="margin: auto; font-weight: bold; text-align: center; width: 100%;">Best Viewed on Desktop.Use Landscape or Desktop mode for Mobile View</p>
   
 </div>
 ''', unsafe_allow_html=True);
@@ -163,7 +164,7 @@ st.markdown('''
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered) + '''</p>    
      </div>     
     <div class="row-sm-3">    
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
+      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Recovered</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
       <p style='text-align: center ; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active) + '''</p>    
     </div> 
