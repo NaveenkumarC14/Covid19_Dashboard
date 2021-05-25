@@ -106,11 +106,6 @@ st.markdown('''
     <h1 style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
  </div>
 ''', unsafe_allow_html=True);
-st.markdown('''
-<div class="jumbotron text-center" style='background-color: #fff'>
-    
-</div>
-''', unsafe_allow_html=True);
 
 state_wise_daily=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
 
