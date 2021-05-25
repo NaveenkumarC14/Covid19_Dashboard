@@ -75,7 +75,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('background.png')
+set_png_as_page_bg('1e4585a1cd51216e70f33db2954eb83c.gif')
 st.markdown(page_bg_img, unsafe_allow_html=True)
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
