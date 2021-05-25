@@ -55,27 +55,6 @@ st.markdown(
 )
 
 	
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("1e4585a1cd51216e70f33db2954eb83c.gif");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('1e4585a1cd51216e70f33db2954eb83c.gif')
 st.markdown(page_bg_img, unsafe_allow_html=True)
 # = Image.open("C:\\Users\\Sathishkumar\\Videos\\Corona-is-innocent.gif")
 #st.image(image,use_column_width=False)
