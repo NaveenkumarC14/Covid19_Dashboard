@@ -111,6 +111,10 @@ st.markdown('''
 ''', unsafe_allow_html=True);
 
 state_wise_daily=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
+daily_test=pd.read_csv('https://api.covid19india.org/csv/latest/tested_numbers_icmr_data.csv')
+daily_vaccine=pd.read_csv('http://api.covid19india.org/csv/latest/cowin_vaccine_data_statewise.csv')
+
+
 Daily=st.selectbox('Daily',('None','Confirmed','Recovered','Deceased','Tested','Vaccine'))
 if Daily=='Confirmed':
 	Confirmed=state_wise_daily[state_wise_daily['Status']=='Confirmed']
@@ -123,6 +127,14 @@ if Daily=='Recovered':
 if Daily=='Deceased':
 	Deceased=state_wise_daily[state_wise_daily['Status']=='Deceased']
 	fig=px.bar(Deceased,x='Date',y="TT",labels={'TT':'Number of Total cases'})
+	st.plotly_chart(fig)
+if Daily=='Tested':
+	fig=px.bar(daily_test,x='Tested As Of',y="Total Samples Tested",labels={'Tested As Of':'Date'})
+	st.plotly_chart(fig)
+if Daily=='Vaccine':
+	daily_state = st.sidebar.selectbox('Select a state',daily_vaccine['State'].unique())
+        selected_state_daily = daily_vaccine[daily_vaccine['State']==daily_state]
+	fig=px.bar(selected_state_daily,x='Updated On',y="Total Doses Administered",labels={'Updated On':'Date'})
 	st.plotly_chart(fig)
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
