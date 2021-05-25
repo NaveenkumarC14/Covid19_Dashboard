@@ -98,7 +98,7 @@ va.columns.values[1]='Vaccine'
 df=pd.merge(df,va)
 
 tested_total=pd.read_csv('https://api.covid19india.org/csv/latest/tested_numbers_icmr_data.csv')
-total_test=df['Total Samples Tested'].iloc[-1]
+total_test=tested_total['Total Samples Tested'].iloc[-1]
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
     <h1 style="margin: auto: width: 100%;">''' + str(special_format(total_test)) + ''' Tested</h1>
