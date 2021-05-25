@@ -56,7 +56,7 @@ st.markdown(
 from PIL import Image
 import streamlit as st
 
-feature_choice2 = st.sidebar.multiselect("Plot Size", task2)
+feature_choice2 = st.sidebar.multiselect("Plot Size")
 if st.button('Find Blueprint'):
     if feature_choice2 == '3-marla':
         image = Image.open('1e4585a1cd51216e70f33db2954eb83c.gif')
