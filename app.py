@@ -165,11 +165,11 @@ if visualization=='Bar Chart':
 
 elif visualization=='Pie Chart':
     #if total==(df1['State'].iloc[0],):
-        st.title("Total Cases")
+        #st.title("Total Cases")
         fig = px.pie(total, values=total['Number of cases'], names=total['Status'])
         st.plotly_chart(fig)
 elif visualization =='Line Chart':
-        st.title("Total Cases")
+        #st.title("Total Cases")
         fig = px.line(state_wise_daily, x="Date", y="TT", color="Status",
               line_group="Status", hover_name="Status")
         st.plotly_chart(fig)
