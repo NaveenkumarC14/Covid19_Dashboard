@@ -165,7 +165,7 @@ st.markdown('''
     <div class="row-sm-3">    
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
-      <p style='text-align: center ; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Active) + '''</p>    
+      <p style='text-align: center ; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active) + '''</p>    
     </div> 
   </div>
 </div>
