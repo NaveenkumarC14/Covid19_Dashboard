@@ -107,7 +107,7 @@ st.markdown('''
 ''', unsafe_allow_html=True);
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
-    <h1 total_test style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
+    <h1 style="margin: auto: width: 100%;">''' + str(special_format(total)) + ''' Vaccine Doses Administered</h1>
 </div>
 ''', unsafe_allow_html=True);
 
