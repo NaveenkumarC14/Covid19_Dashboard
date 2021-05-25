@@ -109,9 +109,19 @@ st.markdown('''
 ''', unsafe_allow_html=True);
 
 state_wise_daily=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
-Daily=st.selectbox('Daily',('None','Confirmed','Recovered','Active','Deaths','Tested','Vaccine'))
-#if tested=='Vaccine Doses':
-
+Daily=st.selectbox('Daily',('None','Confirmed','Recovered','Deceased','Tested','Vaccine'))
+if Daily=='Confirmed':
+	Confirmed=df[df['Status']=='Confirmed']
+	fig=px.bar(Confirmed,x='Date',y="TT",labels={'Date':'Number of Total cases'})
+	st.plotly_chart(fig)
+if Daily=='Recovered':
+	Recovered=df[df['Status']=='Recovered']
+	fig=px.bar(Recovered,x='Date',y="TT",labels={'Date':'Number of Total cases'})
+	st.plotly_chart(fig)
+if Daily=='Deceased:
+	Deceased=df[df['Status']=='Deceased']
+	fig=px.bar(Recovered,x='Date',y="TT",labels={'Date':'Number of Total cases'})
+	st.plotly_chart(fig)
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
 def get_total(df1):
     total = pd.DataFrame({
