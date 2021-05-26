@@ -371,7 +371,7 @@ vaccine_state=pd.merge(dis,vaccine)
 
 	
 def get_table():
-    datatable = vaccine_state[['State','District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
+    datatable = vaccine_state[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
