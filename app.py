@@ -368,8 +368,7 @@ selected_state1 = new[new['State'] == state_select1]
     
 vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
 vaccine_state=pd.merge(dis,vaccine)
-vaccine_state.drop(vaccine_state[vaccine_state['State']=='Delhi'])
-	
+
 	
 def get_table():
     datatable = vaccine_state[['State','District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
