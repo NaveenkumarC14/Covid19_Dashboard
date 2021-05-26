@@ -101,10 +101,7 @@ va.columns.values[1]='Vaccine'
 df=pd.merge(df,va)
 
 
-daily_case=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
-a=daily_case.melt(['Date','Date_YMD','Status'])
-fg=px.bar(a,x='Date',y="value")
-st.plotly_chart(fg)
+
 
 
 tested_total=pd.read_csv('https://api.covid19india.org/csv/latest/tested_numbers_icmr_data.csv')
@@ -124,8 +121,8 @@ daily_vaccine=pd.read_csv('http://api.covid19india.org/csv/latest/cowin_vaccine_
 
 
 Daily=st.selectbox('Daily',('None','Confirmed','Recovered','Deceased','Tested','Vaccine'))
-daily_state = st.selectbox('Choose state',daily_vaccine['State'].unique())
-selected_state_daily = daily_vaccine[daily_vaccine['State']==daily_state]
+#daily_state = st.selectbox('Choose state',daily_vaccine['State'].unique())
+selected_state_daily = daily_vaccine[daily_vaccine['State']=='India']
 if Daily=='Confirmed':
 	Confirmed=state_wise_daily[state_wise_daily['Status']=='Confirmed']
 	fig=px.bar(Confirmed,x='Date',y="TT",labels={'TT':'Number of Total cases'})
