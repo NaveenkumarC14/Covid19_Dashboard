@@ -135,8 +135,8 @@ if Daily=='Tested':
 	fig=px.bar(daily_test,x='Tested As Of',y="Total Samples Tested",labels={'Tested As Of':'Date'})
 	st.plotly_chart(fig)
 if Daily=='Vaccine':
-        daily_state = st.selectbox('Choose state',daily_vaccine['State'].unique())
-        selected_state_daily = daily_vaccine[daily_vaccine['State']==daily_state]	
+        #daily_state = st.selectbox('Choose state',daily_vaccine['State'].unique())
+       # selected_state_daily = daily_vaccine[daily_vaccine['State']==daily_state]	
 	fig=px.bar(selected_state_daily,x='Updated On',y="Total Doses Administered",labels={'Updated On':'Date'})
 	st.plotly_chart(fig)
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
