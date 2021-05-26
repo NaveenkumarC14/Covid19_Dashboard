@@ -100,6 +100,13 @@ va=vaccine.iloc[:,[0,-1]]
 va.columns.values[1]='Vaccine'
 df=pd.merge(df,va)
 
+
+daily_case=pd.read_csv('https://api.covid19india.org/csv/latest/state_wise_daily.csv')
+a=daily_case.melt(['Date','Date_YMD','Status'])
+fg=px.bar(a,x='Date',y="value")
+st.plotly_chart(fg)
+
+
 tested_total=pd.read_csv('https://api.covid19india.org/csv/latest/tested_numbers_icmr_data.csv')
 total_test1=tested_total['Total Samples Tested'].iloc[-2]
 total_test=int(total_test1)
