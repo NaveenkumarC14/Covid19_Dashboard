@@ -366,7 +366,7 @@ selected_state1 = new[new['State'] == state_select1]
 vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
 vaccine_state=pd.merge(dis,vaccine)
 def get_table():
-    datatable = vaccine_state[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine]]
+    datatable = vaccine_state[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
