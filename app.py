@@ -363,7 +363,14 @@ dis=dis3.drop([768,772,769,767,770,771,766,158,211,219,270,271,312,347,459,472])
 #dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = new[new['State'] == state_select1]
-#if selected_state1=="Delhi":
+if selected_state1=="Delhi":
+	st.markdown('''
+        <div class="jumbotron text-center" style='background-color: #fff'>
+  	
+   	<p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">District level Data Not Avalible </p>
+	</div>
+ 	''', unsafe_allow_html=True);
+                 
     
 vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
 vaccine_state=pd.merge(dis,vaccine)
