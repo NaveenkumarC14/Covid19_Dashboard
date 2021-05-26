@@ -357,7 +357,7 @@ st.markdown('''
 dis1=pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv")
 dis2=dis1[2:775]
 dis3=dis2.drop(607)
-dis=dis3.drop([768,772])
+dis=dis3.drop([768,772,769,767,770,771,766])
 #dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
 selected_state1 = dis[dis['State'] == state_select1]
