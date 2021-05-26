@@ -362,7 +362,7 @@ dis=dis3.drop([768,772,769,767,770,771,766,158,211,219,270,271,312,347,459,472])
 #vaccine=new[new['State']==state_select1]
 #dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
-selected_state1 = new[new['State'] == state_select1]
+selected_state1 = dis[dis['State'] == state_select1]
 vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
 vaccine_state=pd.merge(dis,vaccine)
 def get_table():
