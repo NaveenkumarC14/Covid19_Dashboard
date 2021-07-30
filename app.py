@@ -200,9 +200,7 @@ st.markdown('''
 		        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
                        <div style="font-family: Arial, Helvetica, sans-serif; text-align: center;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed)+'''  </div>
             </div>
-	    <div style="height:150px;width: 2%; background-color: black; float:right;">
-            </div>
-	    <div style="height:100px;width: 30%; background-color: red; float:right; right: 200px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
+	    <div style="height:100px;width: 30%; background-color: red; float:right; right: 300px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
 	      <div>
 		       <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;">Confirmed</div>
                        <div style="font-family: Arial, Helvetica, sans-serif; text-align: center;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Confirmed)+'''  </div>
