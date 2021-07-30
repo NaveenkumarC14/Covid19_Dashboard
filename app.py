@@ -395,7 +395,7 @@ vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
 
 	
 def get_table():
-    datatable = vaccine[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
+    datatable = dis[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
