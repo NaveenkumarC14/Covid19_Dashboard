@@ -386,7 +386,7 @@ dis=dis3.drop([768,772,769,767,770,771,766,158,211,219,270,271,312,347,459,472])
 #vaccine=new[new['State']==state_select1]  #line74
 #dis=pd.merge(dis,new)
 state_select1 = st.selectbox('Select a state',dis['State'].unique())
-selected_state1 = state_select1[state_select1['State'] == state_select1]  #use new for vaccine line 75
+selected_state1 = dis[dis['State'] == state_select1]  #use new for vaccine line 75
 
                  
     
