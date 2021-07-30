@@ -193,6 +193,51 @@ st.markdown('''
 </div>
  ''', unsafe_allow_html=True);
 
+st.markdown('''
+            <div style="height:150px;width: 30%;background-color: #d1f0a2; float:left; left: 0px; border-radius: 2px;">
+                    <div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 20px 0px 0px 25px;">'''+str(Total_Confirmed)+''' <span style="font-size: 15px; font-weight: normal"><sub>2</sub></span> </div>
+                        <div style="padding: 0px 0px 0px 25px;">CO<sub>2</sub> emissions mitigated</div>                        
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
+                    </div>
+            </div>  
+
+            <div style="height:150px;width: 2%; background-color: white; float:left;">
+            </div>
+
+            <div style="height:150px;width: 20%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
+                    <div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Death) +''' <span style="font-size: 15px; font-weight: normal">MU</span> </div>
+                        <div style="padding: 0px 0px 0px 25px;">Solar<br>generation</br></div>                        
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
+                    </div>
+            </div>
+
+            <div style="height:150px;width: 13%; background-color: white; float:left; left: 850px; border-radius: 2px; border: 2px solid #d9d9d9; border-left: None;">
+                    <div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #ff661a; font-size: 20px; padding: 35px 0px 0px 25px;">'''+ str(Total_Recovered) +''' </div>
+                        <div style="padding: 10px 0px 0px 0px;font-size: 12px; font-weight: normal; text-align: center;">of total RE generation</br></div>                        
+                    </div>
+            </div>
+
+            <div style="height:150px;width: 2%; background-color: white; float:left;">
+            </div>
+
+            <div style="height:150px;width: 20%; background-color: white; float:left; left: 1200px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
+                    <div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Active) +''' <span style="font-size: 15px; font-weight: normal">MU</span> </div>
+                        <div style="padding: 0px 0px 0px 25px;">Wind<br>generation</br></div>                        
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
+                    </div>
+            </div>
+
+                                       
+    ''' , unsafe_allow_html=True);
+
+
+
+
+
 if visualization=='Bar Chart':
     total_graph = px.bar(total, x='Status',y='Number of cases',
                                labels={'Number of cases':'Number of Total cases'},color='Status')
