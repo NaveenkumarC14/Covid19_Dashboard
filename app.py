@@ -200,7 +200,6 @@ st.markdown('''
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 20px 0px 0px 25px;">'''+ str(Total_Confirmed)+''' <span style="font-size: 15px; font-weight: normal"> </div>
                         <div style="padding: 0px 0px 0px 25px;"></div>                         
                      <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;">Confirmed</div>
-		    </di <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;">Confirmed</div>v>
             </div>
                 
     ''' , unsafe_allow_html=True);
