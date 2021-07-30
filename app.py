@@ -218,7 +218,6 @@ st.markdown('''
                         <div style="padding: 10px 0px 0px 0px;font-size: 12px; font-weight: normal; text-align: center;">of total RE generation</br></div>                        
                     </div>
             </div>
-
             <div style="height:150px;width: 2%; background-color: white; float:left;">
             </div>
 
