@@ -204,7 +204,7 @@ st.markdown('''
             </div>
 	    <div style="height:100px;width: 30%; background-color: red; float:right; right: 1200px; border-radius: 10px; border: 2px solid #d9d9d9; border-right: None;">
 	      <div>
-		       <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;">Confirmed</div>
+		       <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 20px 0px 25px;">Confirmed</div>
                        <div style="font-family: Arial, Helvetica, sans-serif; text-align: center;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Confirmed)+'''  </div>
 	       </div>
 	      
