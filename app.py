@@ -182,12 +182,12 @@ st.markdown('''
     <div class="row-sm-3">   
       <p style='text-align:center; font-weight: 400 ; color: black'>Total Recovered</p>
       <p style='text-align: center; font-size: 15px; color: black'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Recovered)+ '''</p>
+      <p style='text-align: center; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered)+ '''</p>
     </div>    
    <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
       <p style='text-align:center; font-weight: 400 ; color: black'>Total Active</p>
       <p style='text-align: center; font-size: 15px; color: black'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Active)+ '''</p>
+      <p style='text-align: center; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active)+ '''</p>
     </div>    
     </div> 
   </div>
