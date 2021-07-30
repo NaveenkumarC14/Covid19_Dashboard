@@ -192,10 +192,10 @@ st.markdown('''
   </div>
 </div>
  ''', unsafe_allow_html=True);
-
+#d1f0a2
 st.markdown('''
            
-            <div style="height:100px;width: 20%;background-color: #d1f0a2; float:left; left: 0px; border-radius: 2px;">
+            <div style="height:100px;width: 20%;background-color: white; float:left; left: 0px; border-radius: 2px;">
                     <div>
 		        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
                        <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed)+'''  </div>
@@ -207,7 +207,13 @@ st.markdown('''
                     </div>
             </div>
 	      
-	      
+	      <div style="height: 150px; width: 30%; background-color: rgb(209, 240, 162); float: left; left: 0px; border-radius: 2px;">
+        <div>
+            <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 20px 0px 0px 25px;">570044 <span style="font-size: 15px; font-weight: normal;">tCO<sub>2</sub></span> </div>
+            <div style="padding: 0px 0px 0px 25px;">CO<sub>2</sub> emissions mitigated</div>                        
+            <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: rgb(51, 173, 255); font-size: 12px; padding: 5px 0px 0px 25px;">29 July, 2021</div>
+        </div>
+</div>
 	      
     ''' , unsafe_allow_html=True);
 
