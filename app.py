@@ -187,7 +187,7 @@ st.markdown('''
     <div class="row-sm-3">    
       <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
       <p style='text-align: center; font-size: 15px; color: green'></p>
-      <p style='text-align: center ; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active) + '''</p>    
+      <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed)+'''  </div>
     </div> 
   </div>
 </div>
