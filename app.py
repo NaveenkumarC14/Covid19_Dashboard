@@ -207,7 +207,7 @@ st.markdown('''
 
             <div style="height:150px;width: 20%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
                     <div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 20px 0px 0px 25px;">'''+str(Total_Deaths)+''' <span style="font-size: 15px; font-weight: normal"></span> </div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 20px 0px 0px 25px;">'''+str(Total_Death)+''' <span style="font-size: 15px; font-weight: normal"></span> </div>
                         <div style="padding: 0px 0px 0px 25px;"> Total Deaths</div>                        
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
                     </div>
