@@ -179,16 +179,16 @@ st.markdown('''
       <p style='text-align: center; font-size: 15px; color: black'></p>
       <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Death)+ '''</p>
     </div>    
-    <div class="row-sm-3">    
-      <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Recovered</div>
-      <p style='text-align: center; font-size: 15px; color: green'></p>
-      <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Recovered)+'''  </div>  
-     </div>     
-    <div style="height:150px;width: 20%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
+    <div class="row-sm-3">   
+      <p style='text-align:center; font-weight: 400 ; color: black'>Total Recovered</p>
+      <p style='text-align: center; font-size: 15px; color: black'></p>
+      <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Recovered)+ '''</p>
     </div>    
-      <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
-      <p style='text-align: center; font-size: 15px; color: green'></p>
-      <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed)+'''  </div>
+   <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
+      <p style='text-align:center; font-weight: 400 ; color: black'>Total Active</p>
+      <p style='text-align: center; font-size: 15px; color: black'></p>
+      <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Active)+ '''</p>
+    </div>    
     </div> 
   </div>
 </div>
