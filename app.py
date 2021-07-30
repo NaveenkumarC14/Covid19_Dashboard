@@ -165,35 +165,7 @@ st.markdown('''
 ''', unsafe_allow_html=True);
 #st.markdown("## **Overall Cases**")
 
-st.markdown('''
 
-<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
- <div class="row" style="background-color:#fff;width:100%;margin:auto;">
-    <div class="row-sm-3">
-      <p style ='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
-      <p style='text-align: center; font-size: 15px; color: red'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: red'>''' + str(Total_Confirmed) + '''</p>
-    </div>    
-    <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
-      <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
-      <p style='text-align: center; font-size: 15px; color: black'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Death)+ '''</p>
-    </div>    
-    <div class="row-sm-3">   
-      <p style='text-align:center; font-weight: 400 ; color: black'>Total Recovered</p>
-      <p style='text-align: center; font-size: 15px; color: black'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered)+ '''</p>
-    </div>    
-   <div class="row-sm-3" style='background-color: #fff; border-radius: 5px'>
-      <p style='text-align:center; font-weight: 400 ; color: black'>Total Active</p>
-      <p style='text-align: center; font-size: 15px; color: black'></p>
-      <p style='text-align: center; font-size: 40px; font-weight: 600; color: blue'>''' + str(Total_Active)+ '''</p>
-    </div>    
-    </div> 
-  </div>
-</div>
- ''', unsafe_allow_html=True);
-#d1f0a2
 st.markdown('''
             <div style="height:150px;width: 2%; background-color: white; float:left;left: 1500px; border-radius: 2px;"">
             </div>
@@ -279,33 +251,7 @@ st.markdown('''
 </div>
  ''', unsafe_allow_html=True);
 
-st.markdown('''
 
-<div class="jumbotron text-center" style='padding: 0px';background-color:#fff>
- <div class="row" style="background-color:#fff;width:100%;margin:auto;">
-    <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: red'>Total Confirmed</p>
-      <p style='text-align: center; font-size: 15px; color: red'></p>
-      <p style='text-align: center; font-size: 42px; font-weight: bold; color: red'>''' + str(selected_state['Confirmed'].iloc[0]) + '''</p>
-    </div>
-    <div class="row-sm-4" style='background-color: #fff; border-radius: 5px'>
-      <p style='text-align:center; font-weight: 400 ; color: black'>Total Deaths</p>
-      <p style='text-align: center; font-size: 15px; color: #e73631'></p>
-      <p style='text-align: center; font-size: 42px; font-weight: bold; color: black'>''' + str(selected_state['Deaths'].iloc[0])+ '''</p>
-    </div>
-    <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
-      <p style='text-align: center; font-size: 15px; color: green'></p>
-      <p style='text-align: center ; font-size: 42px; font-weight: bold; color:green'>''' + str(selected_state['Recovered'].iloc[0]) + '''</p>
-     </div>
-     <div class="row-sm-4">
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: blue'>Total Active</p>
-      <p style='text-align: center; font-size: 15px; color: blue'></p>
-      <p style='text-align: center ; font-size: 42px; font-weight: bold; color: blue'>''' +str(selected_state['Active'].iloc[0]) + '''</p>
-     </div>
-  </div>
-</div>
- ''', unsafe_allow_html=True);
 
 st.markdown('''
             <div style="height:150px;width: 2%; background-color: white; float:left;left: 1500px; border-radius: 2px;"">
@@ -445,11 +391,11 @@ selected_state1 = new[new['State'] == state_select1]
                  
     
 vaccine=selected_state1.groupby(['District'],as_index=False).agg('sum')
-vaccine_state=pd.merge(dis,vaccine)
+#vaccine_state=pd.merge(dis,vaccine)
 
 	
 def get_table():
-    datatable = vaccine_state[['District', 'Confirmed', 'Active', 'Recovered','Deceased','Vaccine']]
+    datatable = vaccine[['District', 'Confirmed', 'Active', 'Recovered','Deceased']]
     return datatable
 datatable = get_table()
 st.dataframe(datatable)
