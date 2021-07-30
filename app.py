@@ -180,9 +180,9 @@ st.markdown('''
       <p style='text-align: center; font-size: 40px; font-weight: 600; color: black'>''' + str(Total_Death)+ '''</p>
     </div>    
     <div class="row-sm-3">    
-      <p style='text-align: center; background-color: #fff; font-weight: 400 ;color: green'>Total Recovered</p>
+      <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Recovered</div>
       <p style='text-align: center; font-size: 15px; color: green'></p>
-      <p style='text-align: center ; font-size: 40px; font-weight: 600; color: green'>''' + str(Total_Recovered) + '''</p>    
+      <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Recovered)+'''  </div>  
      </div>     
     <div class="row-sm-3">    
       <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
