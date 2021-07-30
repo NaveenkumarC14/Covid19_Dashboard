@@ -228,7 +228,6 @@ st.markdown('''
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
                     </div>
             </div>
-
             <div style="height:150px;width: 13%; background-color: white; float:left; left: 1350px; border-radius: 2px; border: 2px solid #d9d9d9; border-left: None;">
                     <div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #1a8cff; font-size: 20px; padding: 35px 0px 0px 25px;"> </div>
