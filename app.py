@@ -221,7 +221,6 @@ st.markdown('''
 		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Active</div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Active) +''' </div>
             </div>
-	      
 	<div class="MapSwitcher">
 	<div class="highlight" style="opacity: 1; background: rgba(0, 123, 255, 0.125); transform: translate3d(132px, 0px, 0px); width: calc(25%);"></div>
 	<div class="clickable is-confirmed" style="width: calc(25%);"></div>
