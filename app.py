@@ -195,12 +195,12 @@ st.markdown('''
 
 st.markdown('''
            
-            <div style="height:100px;width: 20%;background-color: #d1f0a2; float:left; left: 0px; border-radius: 2px;">
+            <div style="height:100px;width: 30%;background-color: #d1f0a2; float:left; left: 0px; border-radius: 2px;">
                     <div>
 		        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
                        <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed)+'''  </div>
             </div>
-            <div style="height:100px;width: 20%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
+            <div style="height:100px;width: 30%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
                     <div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Confirmed) +''' <span style="font-size: 15px; font-weight: normal">MU</span> </div>
                         <div style="padding: 0px 0px 0px 25px;">Solar<br>generation</br></div>                        
