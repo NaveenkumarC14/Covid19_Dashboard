@@ -202,8 +202,7 @@ st.markdown('''
                         <div style="padding: 0px 0px 0px 25px;"></div>                        
                         
                     
-            </div>  
-
+            
             <div style="height:150px;width: 2%; background-color: white; float:left;">
             </div>
 
