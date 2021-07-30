@@ -203,7 +203,7 @@ st.markdown('''
             </div
 		<div style="height:150px;width: 2%; background-color: white; float:left;left: 150px; border-radius: 2px;"">
             </div>
-            <div style="height:100px;width: 20%; background-color: red; float:right; right: 700px; border-radius: 20px; border: 20px solid #d9d9d9; border-right: right;">
+            <div style="height:100px;width: 20%; background-color: red; float:left; left: 700px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
                     <div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Confirmed) +''' </div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;">Confirmed</div>
