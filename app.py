@@ -217,7 +217,7 @@ st.markdown('''
                     <div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #ff661a; font-size: 20px; padding: 35px 0px 0px 25px;">'''+ str(Total_Recovered) +''' </div>
                                                 
-                    </div>
+                    
             </div>
 
             <div style="height:150px;width: 2%; background-color: white; float:left;">
