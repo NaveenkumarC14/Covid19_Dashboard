@@ -198,7 +198,7 @@ st.markdown('''
             <div style="height:150px;width: 2%; background-color: white; float:left;left: 1500px; border-radius: 2px;"">
             </div>
                     <div>
-		     <div style="height:100px;width: 22%; background-color: white; float:left; left: 1700px; border-radius: 100px; border: 2px solid #d9d9d9; border-right: right;">
+		     <div style="height:100px;width: 22%; background-color: white; float:left; left: 1700px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
 		    <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
                         <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed) +''' </div>
             </div>
@@ -306,6 +306,44 @@ st.markdown('''
   </div>
 </div>
  ''', unsafe_allow_html=True);
+
+st.markdown('''
+            <div style="height:150px;width: 2%; background-color: white; float:left;left: 1500px; border-radius: 2px;"">
+            </div>
+                    <div>
+		     <div style="height:100px;width: 22%; background-color: white; float:left; left: 1700px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
+		    <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(selected_state['Confirmed'].iloc[0]) +''' </div>
+            </div>
+	</div>
+            <div style="height:150px;width: 2%;background-color: white; float:left; left: 200px; border-radius: 2px;">
+	     </div>
+                    <div>
+			<div style="height:100px;width: 22%; background-color: white; float:left; left: 1500px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
+		        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center ; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Active</div>
+                       <div style="font-family: Arial, Helvetica, sans-serif; text-align: center ;font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(selected_state['Active'].iloc[0])+'''  </div>
+	    </div>
+	    </div>
+		<div style="height:150px;width: 2%; background-color: white; float:left;left: 150px; border-radius: 2px;"">
+            </div>
+                    <div>
+          	 <div style="height:100px;width: 22%; background-color: white; float:left; left: 700px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
+		    <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Deaths</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(selected_state['Deaths'].iloc[0]) +''' </div>
+                 </div>
+            </div>
+		<div style="height:150px;width: 2%; background-color: white; float:left;left: 300px; border-radius: 2px;"">
+            </div>
+                    <div>
+		    <div style="height:100px;width: 22%; background-color: white; float:left; left: 1400px; border-radius: 20px; border: 2px solid #d9d9d9; border-right: right;">
+		    <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Recovered</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(selected_state['Recovered'].iloc[0]) +''' </div>
+                  </div>
+		  </div>
+	   
+	''' , unsafe_allow_html=True);
+
+
 
 
 def get_total_dataframe(df):
