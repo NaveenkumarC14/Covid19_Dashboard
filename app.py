@@ -212,19 +212,14 @@ st.markdown('''
                        
             </div>
 
-            <div style="height:150px;width: 13%; background-color: white; float:left; left: 850px; border-radius: 2px; border: 2px solid #d9d9d9; border-left: None;">
-                    <div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #ff661a; font-size: 20px; padding: 35px 0px 0px 25px;">'''+ str(Total_Recovered) +''' </div>
-                          <div style="padding: 0px 0px 0px 25px;">Total Death</div>                         
-                    
-            </div>
+            
 
             <div style="height:150px;width: 2%; background-color: white; float:left;">
             </div>
 
             <div style="height:150px;width: 20%; background-color: white; float:left; left: 1200px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: None;">
                     <div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Active) +''' <span style="font-size: 15px; font-weight: normal">MU</span> </div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 25px;">'''+ str(Total_Recovered) +''' <span style="font-size: 15px; font-weight: normal">MU</span> </div>
                         <div style="padding: 0px 0px 0px 25px;"></div>                        
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 5px 0px 0px 25px;"></div>
                     </div>
