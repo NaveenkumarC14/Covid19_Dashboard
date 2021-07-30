@@ -212,7 +212,6 @@ st.markdown('''
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed) +''' </div>
                     </div>
             </div>
-	     
 		<div style="height:150px;width: 2%; background-color: white; float:left;left: 300px; border-radius: 2px;"">
             </div>
             <div style="height:100px;width: 20%; background-color: white; float:left; left: 1400px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
