@@ -208,24 +208,24 @@ st.markdown('''
             </div>
             <div style="height:100px;width: 20%; background-color: white; float:left; left: 700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
                     <div>
-		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed) +''' </div>
+		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Deaths</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Death) +''' </div>
                     </div>
             </div>
 		<div style="height:150px;width: 2%; background-color: white; float:left;left: 300px; border-radius: 2px;"">
             </div>
             <div style="height:100px;width: 20%; background-color: white; float:left; left: 1400px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
                     <div>
-		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed) +''' </div>
+		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Recovered</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Recovered) +''' </div>
                     </div>
             </div>
-	    <div style="height:150px;width: 2%; background-color: white; float:left;left: 450px; border-radius: 2px;"">
+	    <div style="height:150px;width: 2%; background-color: white; float:left;left: 500px; border-radius: 2px;"">
             </div>
-            <div style="height:100px;width: 20%; background-color: white; float:left; left: 2000px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
+            <div style="height:100px;width: 20%; background-color: white; float:left; left: 1700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
                     <div>
-		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Confirmed</div>
-                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Confirmed) +''' </div>
+		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Active</div>
+                        <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Active) +''' </div>
                     </div>
             </div>
 	      
