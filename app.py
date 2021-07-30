@@ -223,10 +223,11 @@ st.markdown('''
 	    <div style="height:150px;width: 2%; background-color: white; float:right;right: 0px; border-radius: 2px;"">
             </div>
                     <div>
+		     <div style="height:100px;width: 20%; background-color: white; float:left; left: 1700px; border-radius: 2px; border: 2px solid #d9d9d9; border-right: right;">
 		    <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #33adff; font-size: 12px; padding: 20px 25px 0px 20px;">Active</div>
                         <div style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 30px; padding: 10px 0px 0px 2px;">'''+ str(Total_Active) +''' </div>
             </div>
-	
+	</div>
 	''' , unsafe_allow_html=True);
 
 
