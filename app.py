@@ -97,7 +97,8 @@ def special_format(n):
     s, *d = str(n).partition(".")
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
     return "".join([r] + d)
-va=vaccine.iloc[:,[0,-1]]
+va_v2=df.iloc[-38:]
+va=va_v2[['State','Total Doses Administered']]
 va.columns.values[1]='Vaccine'
 df=pd.merge(df,va)
 
