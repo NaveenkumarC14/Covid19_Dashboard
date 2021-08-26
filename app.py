@@ -91,8 +91,8 @@ selected_series = st.sidebar.selectbox("Forecasting:", ('None','Confirmed Cases'
 #st.sidebar.write("Created By:- **_Naveenkumar C_** :sunglasses:")
 
 total=vaccine['Total Doses Administered'].iloc[-1]
-aa=total.iloc[0]
-total=int(total.iloc[0,len(aa)-1])
+#aa=total.iloc[0]
+#total=int(total.iloc[0,len(aa)-1])
 def special_format(n):
     s, *d = str(n).partition(".")
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
