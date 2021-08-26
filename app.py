@@ -25,7 +25,7 @@ from fbprophet.plot import plot_plotly
 
 
 df1 = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
-vaccine=pd.read_csv("http://api.covid19india.org/csv/latest/vaccine_doses_statewise.csv")
+vaccine=pd.read_csv("http://api.covid19india.org/csv/latest/vaccine_doses_statewise_v2.csv")
 test=pd.read_csv('https://api.covid19india.org/csv/latest/statewise_tested_numbers_data.csv')
 
 
