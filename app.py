@@ -161,7 +161,7 @@ Total_Active=total['Number of cases'].iloc[1]
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">Overall Cases</h1>
-   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(df1['Last_Updated_Time'][0]) + '''</p>
+   <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(vaccine['Vaccinated As of'].iloc[-1]) + '''</p>
 </div>
 ''', unsafe_allow_html=True);
 #st.markdown("## **Overall Cases**")
@@ -248,7 +248,7 @@ elif visualization =='Scatter Chart':
 st.markdown('''
 <div class="jumbotron text-center" style='background-color: #fff'>
   <h1 style="margin: auto; width: 100%;">State level analysis</h1>
-  <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(selected_state['Last_Updated_Time'].iloc[0]) + '''</p>
+  <h2></h2><p style="margin: auto; font-weight: 400; text-align: center; width: 100%;">Last Updated: ''' + str(vaccine['Vaccinated As of'].iloc[-1]) + '''</p>
 </div>
  ''', unsafe_allow_html=True);
 
