@@ -4,6 +4,6 @@ plotly==4.8.2
 pystan==2.19.1.1
 streamlit
 numpy
-fbprophet
 pip==23.2.1
 Cython
+fbprophet
