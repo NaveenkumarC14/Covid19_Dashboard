@@ -4,4 +4,4 @@ plotly==4.8.2
 pystan==2.19.1.1
 streamlit==0.62.1
 numpy
-
+pip install fbprophet
