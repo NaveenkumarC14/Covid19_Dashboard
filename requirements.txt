@@ -6,4 +6,5 @@ streamlit
 numpy
 pip==23.2.1
 Cython
+prophet
 fbprophet
